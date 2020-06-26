@@ -1,0 +1,1172 @@
+/* ページ全体 */
+
+html {
+  font-size: calc(100vw /32);
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: 'たぬき油性マジック';
+  src: url('TanukiMagic.ttf') format('ttf');
+}
+
+body {
+  margin: 0em;
+  font-family: 'たぬき油性マジック', 'Hiragino Maru Gothic Pro', sans-serif;
+  background-color: rgba(255, 205, 238, 0.8);
+  z-index: -999;
+  position: relative;
+  box-sizing: border-box !important;
+  padding: 0em;
+  -webkit-box-sizing: border-box;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ヘッダー */
+.hamburger {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(-50%);
+  z-index: 15;
+}
+
+.hamburger-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 20;
+}
+
+.open.hamburger-icon {
+  display: none;
+}
+
+.hamburger-icon:hover {
+  cursor: pointer !important;
+}
+
+.hamburger-line {
+  border-bottom: .4rem solid white;
+  border-radius: 30px;
+  margin-bottom: 1rem;
+  width: 3rem;
+  margin: 0.5rem auto;
+}
+
+#line1.open {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 10px;
+  right: 7px;
+}
+#line2.open {
+  display: none;
+}
+#line3.open {
+  transform: rotate(135deg);
+  position: absolute;
+  top: 10px;
+  right: 7px;
+}
+
+.hamburger-line:hover {
+  cursor: pointer;
+}
+
+@media (min-width:725px) {
+  .hamburger, .hamburger-icon {
+   display: none !important;
+  }
+}
+
+.hamburger-menu li {
+  padding: .3em;
+  opacity: 0;
+  transition: .4s ease;
+  font-size: 22px;
+}
+
+.hamburger-menu li a {
+  text-decoration: none;
+  color: white;
+}
+
+.hamburger-menu li a:hover {
+  opacity: .7;
+}
+
+.open.hamburger-menu li {
+  opacity: 1;
+}
+
+.hamburger-menu {
+  visibility: hidden;
+  background-color: pink;
+  height: 100vh;
+  padding: 10em auto;
+  transition: .4s ease;
+  opacity: 0;
+}
+
+.open.hamburger-menu {
+  visibility: visible;
+  overflow-y: hidden;
+  opacity: 1;
+}
+
+html.open {
+  overflow-y: hidden !important;
+}
+
+
+.nav-item {
+  font-size: 16px;
+}
+#navbar {
+  width: 100%;
+}
+
+.navbar-expand {
+  margin-bottom: 100px;
+}
+.navbar-nav {
+  justify-content: space-around;
+}
+
+#top-h1 {
+  position: absolute;
+  bottom: 200px;
+}
+
+#header-top {
+  position: relative;
+}
+
+#top-title {
+  display: flex;
+  justify-content: center;
+}
+
+#top-title > h1 {
+  font-size: 3.6rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+@media (min-width: 500px) { 
+  #top-title > h1 {
+    font-size: calc(36px + ((1vw - 5px) * (36 / 4.92)));
+  }
+  .top-title-space {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) { 
+  #top-title > h1 {
+    font-size: 72px;
+  }
+}
+
+.top-subtext {
+  position: absolute;
+  bottom: 50px;
+  font-size: 16px;
+}
+
+@media (min-width: 500px) { 
+  .top-subtext {
+    font-size: calc(16px + ((1vw - 5px) * ( 12/ 4.92)));
+  }
+}
+
+@media (min-width: 992px) { 
+  .top-subtext {
+    font-size: 28px;
+  }
+}
+
+
+#header-top {
+  background-image: url('../img/top.jpg');
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position-x: 30%;
+}
+
+.nav-link {
+  color: rgb(189, 184, 184);
+  padding: 10px;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+@media (max-width: 724px) {
+  #navbar {
+    display: none;
+  }
+}
+
+
+@media (min-width: 1188px) {
+  #navbar {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+/* 『ぬくぬくの３つポイント』 */
+.title-box {
+  display: flex;
+  justify-content: center;
+  padding: 16px 10px;
+  margin: 0 auto;
+  background-color: #fba848;
+  color: #fff;
+  border: 2px dashed #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 0 4px #fba848, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  text-shadow: -1px -1px #d48020;
+  font-weight: normal;
+  max-width: 550px;
+  max-height: 160px;
+}
+
+#jk3 {
+  position: absolute;
+  right: -10px;
+  top: .2rem;
+}
+
+.jk-icon {
+  width: 80px;
+}
+
+@media (min-width:500px) {
+  .jk-icon {
+    width: calc(100px + .7rem);
+  }
+}
+
+
+.marker_yellow {
+  background: linear-gradient(transparent 40%, #ffff66);
+  box-sizing: border-box;
+  display: inline !important;
+}
+
+.marker {
+  max-width: 450px;
+  font-size: 24px !important;
+}
+
+@media (min-width:320px) {
+  .marker {
+    font-size: calc(24px + ((1vw - 3.2px) * (16 / 3.3))) !important;
+  }
+}
+
+@media (min-width:650px) {
+  .marker {
+    font-size: 40px !important;
+  }
+}
+
+
+.card {
+  border-radius: 18px;
+}
+
+.card-img-top {
+  height: 250px;
+  border-top-right-radius: 18px;
+  border-top-left-radius: 18px;
+}
+
+#reasons .card-body {
+  height: 150px;
+  padding: 1rem;
+}
+
+@media (min-width:768px) {
+  #reasons .card-body {
+    padding: .6rem;
+  }
+}
+#reasons .card-title {
+  margin: 10px;
+}
+
+#reasons .card-text {
+  font-size: 16px;
+}
+
+#reasons img {
+  object-fit: cover;
+}
+.card-title {
+  font-size: 18px;
+}
+
+
+/* 『こんな女の子にオススメ』 */
+#jk4 {
+  position: absolute;
+  left: -10px;
+  top: .2rem;
+}
+
+#recommendation .card-title {
+  font-size: 28px;
+}
+
+#recommendation .card-body {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 205, 238, 0.4);
+  padding: .5rem;
+}
+
+
+/* 困っている女子高生 */
+
+#wondering-jk-box {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+#wondering-jk {
+  width: 70%;
+  position: relative;
+  right: 3%;
+}
+
+.balloon {
+  max-width: 300px !important;
+  max-height: 175px !important; 
+  margin: 1%;
+}
+
+.balloons {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 10%;
+}
+#balloon1, #balloon2, #balloon3, #balloon4 {
+  position: relative;
+  background: #fff0c6;
+  border-radius: 50%;
+  width: 30%;
+  padding-top: 20%;
+  display: flex;
+  justify-content: center;
+}
+
+.balloon p {
+  margin: auto 0;
+  padding: 0;
+  /* font-size: 3vw; */
+  vertical-align: center;
+  margin: auto 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  min-width: 45px;
+  font-size: 0.1rem;
+}
+
+@media (min-width:460px) {
+  .balloon p {
+    font-size: .8rem !important;
+    
+  }
+}
+
+@media (max-width: 1199px) {
+  #balloon1::before {
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    bottom: -30%;
+    right: 30%;
+    background: #fff0c6;
+    border-radius: 50%;
+    
+  }
+  
+  #balloon1::after {
+    content: '';
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    bottom: -50%;
+    right: 28%;
+    background: #fff0c6;
+    border-radius: 50%;
+  }
+  
+  #balloon2::before {
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    bottom: -30%;
+    right: 30%;
+    background: #fff0c6;
+    border-radius: 50%;
+    
+  }
+  
+  #balloon2::after {
+    content: '';
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    bottom: -50%;
+    right: 28%;
+    background: #fff0c6;
+    border-radius: 50%;
+  }
+  
+  #balloon3::before {
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    bottom: -30%;
+    left: 30%;
+    background: #fff0c6;
+    border-radius: 50%;
+    
+  }
+  
+  #balloon3::after {
+    content: '';
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    bottom: -50%;
+    left: 28%;
+    background: #fff0c6;
+    border-radius: 50%;
+  }
+  
+  #balloon4::before {
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    bottom: -30%;
+    left: 30%;
+    background: #fff0c6;
+    border-radius: 50%;
+    
+  }
+  
+  #balloon4::after {
+    content: '';
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    bottom: -50%;
+    left: 28%;
+    background: #fff0c6;
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .balloons {
+    display: block;
+  }
+  .balloon {
+    width: 150% !important;
+    max-width: 100% !important;
+    border-radius: 30px !important;
+    margin: 20px !important;
+    position: relative;
+  }
+
+  .balloon::after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    margin-top: -30px;
+    border: 30px solid transparent;
+    border-left: 30px solid #fff0c6;
+  }
+
+  .balloon p {
+    width: 100% !important;
+  }
+
+  #wondering-jk {
+    width: 100%;
+    margin-top: 90px;
+  }
+}
+
+/* LINE応募のステッチ枠 */
+#recruit-copy.title-box {
+  display: block;
+  background-color: rgb(230, 250, 141);
+  color: #fff;
+  border: 4px dashed pink;
+  border-radius: 10px;
+  box-shadow: 0 0 0 4px rgb(230, 250, 141), 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  /* text-shadow: 1px 1px rgb(2, 2, 2); */
+  color: rgb(255, 121, 143);
+  font-weight: normal;
+  margin-top: 30px;
+  max-height: 500px;
+  max-width: 90%;
+  
+}
+
+
+@media (min-width:600px) {
+  #recruit-text {
+    font-size: 24px;
+  }
+}
+
+#LINE-icon {
+  vertical-align: middle;
+  color: #00B900;
+}
+
+#LINE-icon:hover {
+  opacity: .8;
+}
+
+.btn-text {
+  color: #00B900;
+}
+
+.btn-text:hover {
+  opacity: .8;
+  color: #00B900;
+}
+
+@media (min-width:650px) {
+  .btn-text {
+    font-size: 22px !important;
+  }
+}
+
+.LINE-btn {
+  background-color: pink;
+  border-radius: 1rem;
+}
+
+/* 女の子ファースト */
+
+#girls-first .card-title {
+  font-size: .5rem;
+  margin: 0;
+  margin-bottom: .1rem;
+
+}
+
+#girls-first .card-text {
+  font-size: .1rem !important;
+
+}
+
+#girls-first .card {
+  max-width: 300px;
+}
+
+#girls-first .card-body {
+  padding: .1rem;
+}
+
+#girls-first .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+#girls-first .col-sm-6 {
+  display: flex;
+  justify-content: center;
+  padding: .5rem 0;
+  width: 70%;
+}
+
+@media (min-width:576px) {
+  #girls-first .col-sm-6 {
+    padding: .25rem;
+  }
+}
+
+/* お仕事内容 */
+
+
+#job-review .card {
+  background-color: #dbf36f;
+  border: dashed 6px pink;
+  box-shadow: 0 0 0 4px #dbf36f, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+}
+
+#job-review .card-text {
+  margin-bottom: 10px;
+  font-size: .7rem;
+  color: rgb(255, 121, 143);
+  /* text-shadow: 1px 1px rgb(2, 2, 2); */
+}
+#cast-img, #reception-img {
+  border-radius: .6rem .6rem 0 0 ;
+  height: 100%;
+}
+
+@media (max-width:767px) {
+  #cast-img {
+    max-height: 300px ;
+    object-fit: cover;
+    object-position: 90%, 50%;
+  }
+}
+@media (min-width:768px) {
+  #cast-img {
+    border-radius: .6rem  0 0 .6rem ;
+  }
+  #reception-img {
+    border-radius: 0 .5rem .5rem 0;
+  }
+  #job-review .card-text {
+    font-size: .4rem;
+  }
+}
+
+#blackboard-box {
+  position: relative;
+  display: inline;
+}
+.blackboard {
+  width: 80%;
+}
+
+#job-review .card-body {
+  text-align: center;
+}
+.salary-info {
+  position: absolute;
+  top: -1rem;
+  left: 10px;
+  font-size: .6rem;
+  padding: 0em;
+  margin: 0 auto;
+}
+
+@media (max-width:767px) {
+  .salary-info {
+    font-size: 1rem;
+    position: absolute;
+    top: -3rem;
+  }
+}
+
+.salary-info ul {
+  list-style-type: none;
+  padding: 0em;
+  margin: 0em;
+  color: #ffff66;
+}
+
+/* 給与について */
+#envelope {
+  position: absolute;
+  right:10px;
+  bottom: 0;
+  height: 100%;
+  width: auto;
+}
+.childa {
+  font-weight: bolder;
+}
+
+.salary-system {
+  max-width: 800px;
+  position: relative;
+}
+
+.salary-text {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  color: pink;
+}
+
+#blackboard {
+  max-width: 800px;
+}
+
+#salary ul {
+  margin-bottom: .5rem;
+}
+#salary li {
+  font-size: 10px; 
+  text-align: left;
+}
+
+@media (min-width:320px) {
+  #salary li {
+    font-size: calc(10px + ((1vw - 3.2px) * (18 / 6.72))); 
+  }
+}
+
+@media (min-width:992px) {
+  #salary li {
+    font-size: 28px;
+  }
+}
+
+#salary h5 {
+  font-size: 10px;
+  width: 85%;
+  margin: 0.3rem auto;
+}
+
+@media (min-width:320px) {
+  #salary h5 {
+    font-size: calc(10px + ((1vw - 3.2px) * (22 / 6.72)));
+  }
+}
+
+@media (min-width:992px) {
+  #salary h5 {
+    font-size: 32px;
+  }
+}
+
+#salary h4 {
+  font-size: 1rem;
+  margin: .8rem 0;
+  color: yellow;
+}
+
+@media (min-width:992px) {
+  #salary h4 {
+    margin: .2rem 0;
+  }
+}
+
+.highlight-red {
+  background: linear-gradient(transparent 50%, red);
+}
+
+/* まだまだある！ぬくぬくで働く理由！ */
+#jk9 {
+  position: absolute;
+  top: 0.2rem;
+  right: -20px;
+}
+
+#more-promotion .card-body {
+  padding: .3rem;
+}
+
+#more-promotion .card-title{
+ font-size: 1.8rem;
+ margin-bottom: .3rem;
+}
+
+@media (min-width:576px) {
+  #more-promotion .card-title {
+    font-size: .9em;
+  }
+  #more-promotion .card-body {
+    height: 110px;
+  }
+}
+
+#more-promotion .card-text {
+ font-size: 1rem;
+}
+
+@media (min-width:576px) {
+  #more-promotion .card-text {
+    font-size: .6em;
+  }
+}
+
+#more-promotion .card-img {
+  width: 100%;
+  height: 233px;
+  object-fit: cover;
+  object-position: 50% 0%;
+  border-radius: .4rem .4rem 0 0;
+  bottom: 0;
+}
+
+@media (max-width:575px) {
+  #more-promotion .card-img {
+    border-radius: 1rem 1rem 0 0;
+  }
+}
+
+#more-promotion .card-title {
+  font-size: 18px;
+  margin-bottom: .3rem;
+}
+
+#more-promotion .card-text {
+  font-size: 16px;
+  margin-bottom: .3rem;
+}
+
+
+@media (min-width:992px) {
+  #salary h5 {
+    font-size: 18px;
+  }
+}
+
+
+.card-img-logo {
+  position: absolute;
+  transform: rotate(45deg);
+  top: 80px;
+  right: -20px;
+  width: 60%;
+}
+
+.card-img-logo#logo-experienced {
+  transform: rotate(0);
+  left: 10px;
+  width: 55%;
+}
+
+.card-img-logo#logo-free {
+  transform: rotate(45deg);
+  width: 50%;
+  left: 55%;
+  top: 50px;
+}
+
+/* よくある質問 */
+
+.q-title, .q-answer {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 auto;
+  border: orange 2px solid;
+  border-radius: 5px ;
+  position: relative;
+}
+
+.q-answer {
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+}
+ 
+.q-title::after {
+  content: '\f078';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  display: block;
+  top: 0;
+  right: .5rem;
+  font-size: 1em;
+  width: 1em;
+  height: 1em;
+  transition: .4s ease;
+}
+
+.q-title:hover {
+  cursor: pointer;
+  opacity: .5;
+}
+
+.active.q-title::after {
+  transform: rotate(180deg);
+  top:.5em
+}
+
+/* アクセス */
+
+#access .title-box {
+  position: relative;
+}
+
+#access .marker::before {
+  content: '\f3c5';
+  display: block;
+  font-family: 'Font Awesome 5 Free';
+  font-size: 7rem;
+  /* height: 1em; */
+  font-weight: 900;
+  position: absolute;
+  top: 0.05rem;
+  left: .1rem;
+  color: red;
+}
+
+@media (min-width:500px) {
+  #access .marker::before {
+    font-size: 3em;
+  }
+}
+
+/* アクセス */
+
+.googlemap {
+  position: relative;
+  height: 200px;
+}
+
+iframe {
+  position: absolute;
+  width: 100%;
+  max-height: 200px;
+}
+
+@media (min-width:500px) {
+  iframe {
+    max-height: 300px;
+  }
+  .googlemap {
+    height: 300px;
+  }
+}
+
+/* LINE追従ボタン */
+#LINE-icon-follow {
+  color: #00B900;
+  position: fixed;
+  bottom: 200px;
+  right: 10px;
+  z-index: 99;
+}
+
+/* ページトップボタン */
+#btn-back-to-top {
+  border-radius: 50px;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  background-color: #fff;
+  z-index: 100;
+  color: pink;
+}
+
+/* ページ下部ボタン */
+
+#footer-btns a {
+  text-decoration: none;
+  color: white;
+}
+
+#footer-btns .title-box:hover {
+  opacity: .7;
+  cursor: pointer;
+}
+
+#footer-btns h2 {
+  font-size: 20px !important;
+  width: 70% !important;
+}
+
+@media (min-width:555px) and (max-width:575px) {
+  .hide1 {
+   display: block !important;
+  }
+}
+
+@media (max-width:370px) {
+  .hide2 {
+    display: none;
+  }
+}
+
+#footer-btns img {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@media(min-width:576px) and (max-width:767px) {
+  #footer-btns img {
+   width: 150px;
+   right: -20px;
+  }
+  .hide3 {
+    display: block !important;
+   }
+
+  #footer-btn-img-4 {
+    position: absolute;
+    top: 20px !important;
+  }
+ 
+  
+}
+
+#footer-btns span {
+  background: linear-gradient(transparent 40%, pink);
+}
+
+#footer-btn-img-2 {
+  position: absolute;
+  right: 10px !important;
+}
+
+#footer-btn-img-3 {
+  position: absolute;
+  right: -.8rem !important;
+  width: 120px;
+  
+}
+
+#footer-btn-img-4 {
+  position: absolute;
+  top: .2rem;
+}
+
+#bg-light-green {
+  background-color: rgb(194, 223, 191) !important;
+  box-shadow: 0 0 0 4px rgb(194, 223, 191), 2px 1px 6px 4px rgba(10, 10, 0, 0.5) !important;
+  text-shadow: -1px -1px rgb(194, 223, 191) !important;
+}
+
+#bg-light-blue {
+  background-color: rgb(158, 229, 231);
+  box-shadow: 0 0 0 4px rgb(158, 229, 231), 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  text-shadow: -1px -1px rgb(158, 229, 231);
+}
+
+#bg-light-yellow {
+  background-color: rgb(226, 231, 158);
+  box-shadow: 0 0 0 4px rgb(226, 231, 158), 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  text-shadow: -1px -1px rgb(226, 231, 158);
+}
+#bg-light-orange {
+  background-color: rgb(255, 213, 75);
+  box-shadow: 0 0 0 4px rgb(255, 213, 75), 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  text-shadow: -1px -1px rgb(255, 213, 75);
+}
+#bg-light-yellow {
+  background-color: rgb(226, 231, 158);
+  box-shadow: 0 0 0 4px rgb(226, 231, 158), 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  text-shadow: -1px -1px rgb(226, 231, 158);
+}
+#bg-light-purple {
+  background-color: rgb(152, 172, 228);
+  box-shadow: 0 0 0 4px rgb(152, 172, 228), 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  text-shadow: -1px -1px rgb(152, 172, 228);
+}
+
+#blog-title {
+  font-size: 40px;
+  position: absolute;
+  left: 50%;
+  text-shadow:1px 1px 0 rgb(51, 223, 157), -1px -1px 0 rgb(51, 223, 157),
+              -1px 1px 0 rgb(51, 223, 157), 1px -1px 0 rgb(51, 223, 157),
+              0px 1px 0 rgb(51, 223, 157),  0 -1px 0 rgb(51, 223, 157),
+              -1px 0 0 rgb(51, 223, 157), 1px 0 0 rgb(51, 223, 157);
+  color: rgb(55, 118, 255);        
+  
+}
+
+@media(min-width:576px) and (max-width:767px) {
+  #blog-title {
+    position: absolute;
+    bottom: 10px;
+    margin: 0;
+  }
+
+}
+ 
+
+
+
+/* Footer */
+
+#footer {
+  background-color: rgb(243, 131, 150);
+}
+
+.footer-col-1 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-col-1 li {
+  padding: 0 10px;
+  text-align: left !important;
+}
+
+@media (min-width:768px) {
+  .footer-col-1 {
+    display: block;
+  }
+
+  .footer-col-1 li {
+    font-size: 28px;
+    line-height: 1.5rem;
+  }
+
+  .footer-col-1 li:nth-child(10) {
+    font-size: 17px;
+    line-height: 1.5rem;
+  }
+
+  .footer-col-1 li:nth-child(2) {
+    font-size: 24px;
+    line-height: 1.5rem;
+  }
+  
+}
+
+footer li, footer a, footer h6, footer p {
+  color: rgb(201, 201, 201);
+}
+
+footer a:hover {
+  color: rgb(201, 201, 201);
+  opacity: .7;
+  border-bottom: none;
+  text-decoration: none;
+}
+
+footer li:hover {
+  border-bottom: none;
+}
+
+@media (max-width:767px) {
+  .box-under {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width:768px) {
+
+}
+
+.sns-icon {
+  width: 100%;
+}
+
